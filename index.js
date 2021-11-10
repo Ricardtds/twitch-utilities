@@ -6,8 +6,9 @@ app.get('/',(req,res)=>{
     res.sendStatus(200)
 })
 
-app.get('/moeda/slp',(req,res)=>{
-    let lastvalue = '';
+let lastvalue = '';
+
+app.get('/moeda/slp',(req,res)=>{  
     axios.request('https://api.coingecko.com/api/v3/simple/price?ids=smooth-love-potion&vs_currencies=brl')
     .then(response=>{
         res.send(`${response.data['smooth-love-potion']['brl']}`)
