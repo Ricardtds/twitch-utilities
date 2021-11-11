@@ -6,15 +6,16 @@ app.get('/',(req,res)=>{
     res.sendStatus(200)
 })
 
-let lastvalue = '';
-
-app.get('/moeda/slp',(req,res)=>{  
-    axios.request('https://api.coingecko.com/api/v3/simple/price?ids=smooth-love-potion&vs_currencies=brl')
+app.get('/moeda/',(req,res)=>{  
+    axios.request(`https://api.coingecko.com/api/v3/simple/price?ids=${req.query.coin}&vs_currencies=${req.query.vs_currencies}`)
     .then(response=>{
-        res.send(`${response.data['smooth-love-potion']['brl']}`)
-        lastvalue = response.data['smooth-love-potion']['brl'];
+        if(response.data[req.query.coin][req.query.vs_currencies] == undefined) {
+            res.send('Erro no nome da moeda')
+        } else {
+            res.send(`${response.data[`${req.query.coin}`][`${req.query.vs_currencies}`]}`)
+        }    
     }).catch((error)=>{
-        res.send(`ERROR: último valor foi: ${lastvalue}`)
+        res.send(`Erro no nome da criptomoeda`)
     })
 })
 
