@@ -15,7 +15,7 @@ app.get('/moeda/',(req,res)=>{
             res.send(`${response.data[`${req.query.coin}`][`${req.query.vs_currencies}`]}`)
         }    
     }).catch((error)=>{
-        res.send(`Erro no nome da criptomoeda`)
+        res.send(`Erro ao obter moeda`)
     })
 })
 
