@@ -19,13 +19,13 @@ O objetivo é retornar somente o **valor** de uma criptomoeda convertido para um
 
 > Para realizar uma requisição você você deverá utilizar o seguinte formato:
 ```
-    https://ricardinst-utilities.herokuapp.com/moeda?vs_currencies=[moeda]&coin=[id-criptomoeda]
+https://ricardinst-utilities.herokuapp.com/moeda?vs_currencies=[moeda]&coin=[id-criptomoeda]
 ```
 
 >  Um exemplo em que retorna o valor da criptomoeda SLP(Smooth Love Potion) em BRL(Real Brasileiro):
 ```
- https://ricardinst-utilities.herokuapp.com/moeda?vs_currencies=brl&coin=smooth-love-potion
+https://ricardinst-utilities.herokuapp.com/moeda?vs_currencies=brl&coin=smooth-love-potion
 ```
 ```
- Resposta do exemplo: 0.306187 dados de: 02/12/2021, 15:44:21
+Resposta do exemplo: 0.306187 dados de: 02/12/2021, 15:44:21
 ```
