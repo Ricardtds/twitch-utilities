@@ -26,3 +26,6 @@ O objetivo é retornar somente o **valor** de uma criptomoeda convertido para um
 ```
  https://ricardinst-utilities.herokuapp.com/moeda?vs_currencies=brl&coin=smooth-love-potion
 ```
+```
+ Resposta do exemplo: 0.306187 dados de: 02/12/2021, 15:44:21
+```
